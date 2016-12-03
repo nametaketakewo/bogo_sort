@@ -9,19 +9,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Harutaka Takeuchi"]
   spec.email         = ["nametaketakewo@icloud.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{This gem add bogosort (that f*ckin' sort algorithm) to Array objects.}
+  spec.description   = %q{
+    You'll be able to use Array#bogosort (this is an alias for: Array#bogo_sort)
+    And Array#bogosort! (this is an alias for: Array#bogo_sort!)
+    But Array#bogo_sort can't sort Array include some Classes that can't compared
+    At this time, Array#bogo_sort return nil
+  }
+  spec.homepage      = "https://github.com/nametaketakewo/bogo_sort"
   spec.license       = "MIT"
-
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
